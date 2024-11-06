@@ -1,0 +1,11 @@
+{
+  "dependencies": {},
+  "devDependencies": {
+    "prettier": "3.3.3",
+    "@types/bun": "latest"
+  },
+  "scripts": {
+    "format": "prettier --write ."
+  },
+  "name": "fed-assignment-1"
+}

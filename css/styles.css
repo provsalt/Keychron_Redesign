@@ -1,0 +1,27 @@
+.app {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: var(--z-dropdown);
+    box-shadow: var(--shadow-sm);
+    padding: var(--space-md);
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    gap: var(--space-lg);
+    padding: var(--space-lg);
+}
+
+@media (max-width: 768px) {
+    .main {
+        grid-template-columns: 1fr;
+        padding: var(--space-md);
+    }
+}
