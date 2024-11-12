@@ -92,15 +92,15 @@
 }
 
 /* Animations */
-.fade-in {
-  animation: fadeIn var(--transition-normal);
+.ease-in {
+  animation: fadeIn 300ms ease-in;
 }
 
 @keyframes fadeIn {
-  from {
+  0% {
     opacity: 0;
   }
-  to {
+  100% {
     opacity: 1;
   }
 }
