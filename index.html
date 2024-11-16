@@ -11,6 +11,7 @@
     <link as="script" href="js/utils.js" rel="preload" />
 
     <script defer src="components/Navbar.js" type="module"></script>
+    <script defer src="components/Card.js" type="module"></script>
 
     <link href="css/utils.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
@@ -34,8 +35,31 @@
           </div>
           <img alt="KeyClack" class="hero-image" src="public/hero.png" />
         </section>
-        <section class="features">
-
+        <section class="flex flex-col features">
+          <div>
+            <h1 class="text-4xl font-bold">Features</h1>
+            <p class="text-lg">Why choose KeyCraft?</p>
+          </div>
+          <div class="flex items-center">
+            <card-component>
+              <h1 slot="title">High Quality Components</h1>
+                <p slot="content">
+                    We use the best components to build our keyboards
+                </p>
+            </card-component>
+            <card-component>
+              <h1 slot="title">High Quality Components</h1>
+                <p slot="content">
+                    We use the best components to build our keyboards
+                </p>
+            </card-component>
+            <card-component>
+              <h1 slot="title">High Quality Components</h1>
+                <p slot="content">
+                    We use the best components to build our keyboards
+                </p>
+            </card-component>
+          </div>
         </section>
       </main>
     </div>

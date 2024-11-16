@@ -1,5 +1,4 @@
 .app {
-  all: unset;
   font-family: Inter, var(--font-primary), serif;
   min-height: 100vh;
   display: grid;
@@ -7,11 +6,18 @@
 }
 
 .header {
-  position: sticky;;
+  position: sticky;
   top: 0;
   z-index: var(--z-dropdown);
   box-shadow: var(--shadow-sm);
   padding: var(--space-md);
+}
+
+.highlight {
+    background: linear-gradient(90deg, #ff0099, #ff003b);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 .main {
@@ -63,8 +69,8 @@
 }
 
 .features {
-  padding-left: 20dvw;
-  padding-right: 20dvw;
+  padding-left: 10dvw;
+  padding-right: 10dvw;
 }
 
 @media (max-width: 768px) {
