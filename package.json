@@ -7,7 +7,8 @@
   },
   "scripts": {
     "format": "prettier --write .",
-    "dev": "vite"
+    "dev": "vite",
+    "build": "vite build"
   },
   "name": "fed-assignment-1"
 }
