@@ -69,8 +69,8 @@
 }
 
 .features {
-  padding-left: 10dvw;
-  padding-right: 10dvw;
+  padding-left: 5dvw;
+  padding-right: 5dvw;
 }
 
 @media (max-width: 768px) {

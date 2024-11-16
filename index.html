@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="KeyClack" name="description" />
-    <title>KeyClack</title>
+    <meta content="KeyCraft" name="description" />
+    <title>KeyCraft</title>
 
     <link as="style" href="css/utils.css" rel="preload" />
     <link as="style" href="css/styles.css" rel="preload" />
@@ -29,35 +29,45 @@
               The keyboard that <span class="highlight">fits</span> your needs.
             </h1>
             <p>
-              KeyClack is a fully customizable keyboard and fully programmable
+              Keycraft is a fully customizable keyboard and fully programmable
             </p>
             <button>Shop now</button>
           </div>
-          <img alt="KeyClack" class="hero-image" src="public/hero.png" />
+          <img alt="Keycraft" class="hero-image" src="public/hero.png" />
         </section>
         <section class="flex flex-col features">
           <div>
             <h1 class="text-4xl font-bold">Features</h1>
-            <p class="text-lg">Why choose KeyCraft?</p>
+            <p class="text-lg">Why choose Keycraft?</p>
           </div>
-          <div class="flex items-center">
+          <div class="flex flex-col md:flex-row gap-4">
             <card-component>
-              <h1 slot="title">High Quality Components</h1>
-                <p slot="content">
-                    We use the best components to build our keyboards
-                </p>
+              <h1 class="text-2xl font-bold" slot="title">High Quality Components</h1>
+                <div slot="content" class="">
+                  <img class="object-cover" alt="High Quality Components" src="public/barebone-q1-jis.png" />
+                  <p>
+                    We use the best components to build our keyboards, so you can
+                    enjoy a great typing experience.
+                  </p>
+                </div>
             </card-component>
             <card-component>
-              <h1 slot="title">High Quality Components</h1>
-                <p slot="content">
-                    We use the best components to build our keyboards
-                </p>
+              <h1 class="text-2xl font-bold" slot="title">Compatible With All Devices</h1>
+                <div slot="content" class="">
+                  <img alt="High Quality Components" src="public/compatible.png" />
+                  <p>
+                    Keycraft keyboards are 100% compatible with multiple operating systems. Perfectly suitable for macOS, Windows, iOS, as well as Android.
+                  </p>
+                </div>
             </card-component>
             <card-component>
-              <h1 slot="title">High Quality Components</h1>
-                <p slot="content">
-                    We use the best components to build our keyboards
-                </p>
+              <h1 class="text-2xl font-bold" slot="title">Compatible With All Devices</h1>
+                <div slot="content" class="">
+                  <img alt="High Quality Components" src="public/compatible.png" />
+                  <p>
+                    Keycraft keyboards are 100% compatible with multiple operating systems. Perfectly suitable for macOS, Windows, iOS, as well as Android.
+                  </p>
+                </div>
             </card-component>
           </div>
         </section>
