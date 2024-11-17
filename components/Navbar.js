@@ -33,7 +33,7 @@ const nav = `
     }
   </style>
   <nav>
-    <p id="brand">KeyCraft</p>
+    <p id="brand">Keyclack</p>
     <div class="mid">
         <a href="/products">Products</a>
         <a href="/about">About</a>
