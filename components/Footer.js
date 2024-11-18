@@ -49,22 +49,22 @@ const footer = `
             <h2 class="text-xl font-bold mb-4">Help & Support</h2>
             <ul class="flex flex-col gap-6 md:gap-2">
                 <li>
-                    <a class="underline" href="https://usevia.app/">User Manual</a>
+                    <a class="underline" href="/manual">User Manual</a>
                 </li>
                 <li>
-                    <a class="underline" href="/about">Firmwares</a>
+                    <a class="underline" href="/firmware">Firmwares</a>
                 </li>
                 <li>
-                    <a class="underline" href="/about#contact">Help Center</a>
+                    <a class="underline" href="/help">Help Center</a>
                 </li>
                 <li>
-                    <a class="underline" href="/store/gift-card">Privacy Policy</a>
+                    <a class="underline" href="/policies#privacy">Privacy Policy</a>
                 </li>
                 <li>
-                    <a class="underline" href="/about#contact">Refund policy</a>
+                    <a class="underline" href="/policies#refund">Refund policy</a>
                 </li>
                 <li>
-                    <a class="underline" href="/store/gift-card">Terms of Service</a>
+                    <a class="underline" href="/policies#terms">Terms of Service</a>
                 </li>
             </ul>
         </section>
