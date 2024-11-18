@@ -12,14 +12,13 @@ const nav = `
     
     .mid {
         display: flex;
-        gap: var(--space-md);
-        
+        gap: 1.5rem;
     }
     
     #icons {
         display: flex;
         align-items: center;
-        gap: var(--space-md);
+        gap: 1.5rem;
     }
     
     .icon {

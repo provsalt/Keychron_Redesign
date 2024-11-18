@@ -3,14 +3,6 @@
     Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
-  --space-xxs: 0.25rem;
-  --space-xs: 0.5rem;
-  --space-sm: 0.75rem;
-  --space-md: 1rem;
-  --space-lg: 1.5rem;
-  --space-xl: 2rem;
-  --space-xxl: 3rem;
-
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
@@ -28,6 +20,8 @@
   --z-modal: 1100;
   --z-toast: 1200;
 }
+
+/* Additional normalization because I hate default styles*/
 
 h1,
 h2,
@@ -108,20 +102,9 @@ button,
 progress {
   vertical-align:baseline
 }
-::-webkit-inner-spin-button,
-::-webkit-outer-spin-button {
-  height:auto
-}
 [type=search] {
   -webkit-appearance:textfield;
   outline-offset:-2px
-}
-::-webkit-search-decoration {
-  -webkit-appearance:none
-}
-::-webkit-file-upload-button {
-  -webkit-appearance:button;
-  font:inherit
 }
 summary {
   display:list-item
@@ -191,16 +174,11 @@ video {
   max-width:100%;
   height:auto
 }
-[hidden] {
-  display:none
-}
+
+/* Flex and Grid utils */
 
 .flex {
   display: flex;
-}
-
-w-full {
-    width:100%
 }
 
 .flex-1 {
@@ -240,6 +218,7 @@ w-full {
 .gap-6 {
   gap:1.5rem
 }
+
 .rounded-full {
   border-radius:9999px
 }
@@ -248,12 +227,58 @@ w-full {
   border-width:4px
 }
 
+/* Padding, Width, Height and Margin */
+
 .p-0 {
   padding:0
 }
 
+.p-4 {
+  padding: 1rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
 .grid {
   display:grid
+}
+
+.w-8 {
+  width: 2rem;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.p-0 {
+  padding: 0;
+}
+
+.w-full {
+  width:100%
+}
+
+
+/* Text styles*/
+
+.text-xl {
+  font-size: 1.25rem;
 }
 
 .text-2xl {
@@ -281,7 +306,7 @@ w-full {
   line-height:1.75rem
 }
 
-text-md {
+.text-md {
   font-size:1rem;
   line-height:1.5rem
 }
@@ -311,29 +336,6 @@ text-md {
   border: 0;
 }
 
-.gap-sm {
-  gap: var(--space-sm);
-}
-.gap-md {
-  gap: var(--space-md);
-}
-.gap-lg {
-  gap: var(--space-lg);
-}
-
-.m-0 {
-  margin: 0;
-}
-.mt-auto {
-  margin-top: auto;
-}
-.p-0 {
-  padding: 0;
-}
-.p-md {
-  padding: var(--space-md);
-}
-
 .text-sm {
   font-size: 0.875rem;
 }
@@ -348,6 +350,29 @@ text-md {
 }
 .text-center {
   text-align: center;
+}
+
+.text-wrap {
+  text-wrap: wrap;
+}
+
+.text-nowrap {
+  text-wrap: nowrap;
+}
+
+/* Shadow */
+.shadow-md {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.shadow-2xl {
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+
+/* Others */
+
+.underline {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.95);
 }
 
 /* Animations */
@@ -372,6 +397,23 @@ text-md {
 @media (min-width: 769px) {
   .md\:flex-row {
     flex-direction: row;
+  }
+
+  .md\:gap-4 {
+    gap: 2rem;
+  }
+
+  .md\:p-8 {
+    padding: 2rem;
+  }
+
+  .md\:px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .md\:max-w-35dvw {
+    max-width: 35dvw;
   }
 }
 

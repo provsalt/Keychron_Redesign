@@ -9,8 +9,9 @@
   position: sticky;
   top: 0;
   z-index: var(--z-dropdown);
-  box-shadow: var(--shadow-sm);
-  padding: var(--space-md);
+  box-shadow: var(--shadow-md);
+  padding: 0.75rem;
+  background: white;
 }
 
 .highlight {
@@ -23,7 +24,7 @@
 .main {
   display: flex;
   flex-direction: column;
-  gap: var(--space-lg);
+  gap: 1.5rem;
 }
 
 .hero-image {
@@ -48,13 +49,13 @@
 .hero-content h1 {
   font-size: 2.5rem;
   font-weight: 900;
-  margin-bottom: var(--space-sm);
+  margin-bottom: 0.75rem;
 }
 
 .hero-content p {
   font-size: 1.25rem;
   font-weight: 400;
-  margin-bottom: var(--space-md);
+  margin-bottom: 0.75rem;
 }
 
 .hero-content button {
