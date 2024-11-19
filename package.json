@@ -5,6 +5,7 @@
     "@types/bun": "latest",
     "vite": "^5.4.10"
   },
+  "type": "module",
   "scripts": {
     "format": "prettier --write .",
     "dev": "vite",

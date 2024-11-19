@@ -73,10 +73,10 @@ const footer = `
             <p>Sign up for exclusive offers, original stories, events and more.</p>
             <form class="flex flex-col gap-2">
                 <label for="newsletter-email">Your email</label>
-                <div class="flex w-full"> 
-                    <input type="email" id="newsletter-email" placeholder="eg: me@raymond.moe" class="w-full" required />
-                    <button type="submit" aria-label="Subscribe to newsletter" class="w-8">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <div class="flex w-full border border-2 border-grey-900 text-gray-900"> 
+                    <input type="email" id="newsletter-email" placeholder="eg: me@raymond.moe" class="w-full p-2" style="border: 0;" required />
+                    <button type="submit" aria-label="Subscribe to newsletter" style="border: 0;">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 text-gray-900">
   <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
 </svg>
 

@@ -21,6 +21,10 @@
   --z-toast: 1200;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Additional normalization because I hate default styles*/
 
 h1,
@@ -223,14 +227,31 @@ video {
   border-radius:9999px
 }
 
+.border {
+  border-width:1px;
+  border-style:solid
+}
+
 .border-4 {
-  border-width:4px
+  border-width: 2px
+}
+
+.border-4 {
+  border-width: 4px
+}
+
+.border-grey-900 {
+    border-color: rgba(0, 0, 0, 0.9)
 }
 
 /* Padding, Width, Height and Margin */
 
 .p-0 {
   padding:0
+}
+
+.p-2 {
+  padding: 0.5rem;
 }
 
 .p-4 {
@@ -373,6 +394,11 @@ video {
 
 .underline {
   border-bottom: 2px solid rgba(0, 0, 0, 0.95);
+}
+
+/* Colors */
+.text-gray-900 {
+    color: rgba(0, 0, 0, 0.9);
 }
 
 /* Animations */
