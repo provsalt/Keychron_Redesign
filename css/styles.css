@@ -74,6 +74,11 @@
   padding-right: 5dvw;
 }
 
+.features-image {
+  max-width: 50%;
+}
+
+
 @media (max-width: 768px) {
   .main {
     flex-direction: column;
@@ -81,4 +86,8 @@
   .hero-image {
     width: 100dvw;
   }
+  .features-image {
+    max-width: 100%;
+  }
+
 }

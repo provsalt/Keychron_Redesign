@@ -1,10 +1,10 @@
 const base = import.meta.env.BASE_URL || ""
 
 const footer = `
-    <footer class="flex flex-col md:flex-row p-4 md:p-8 md:px-16 justify-between gap-6 shadow-md mt-4">
+    <footer class="flex flex-col md:flex-row p-4 md:p-8 md:px-16 justify-between gap-6 shadow-md mt-4" style="background: rgba(0, 0, 0, 0.05)">
         <section class="flex flex-col gap-4 md:max-w-35dvw">
-            <h2 class="text-2xl font-bold">Keyclack</h2>
-            <p class="text-wrap">Keyclack designs and produces custom and wireless productive and premium computer peripherals.</p>
+            <h2 class="text-2xl font-bold">Keychron</h2>
+            <p class="text-wrap">Keychron designs and produces custom and wireless productive and premium computer peripherals.</p>
             <ul class="flex">
                 <li>
                     <a href="#">
@@ -32,7 +32,7 @@ const footer = `
             <h2 class="text-xl font-bold mb-4">Quick Links</h2>
                 <ul class="flex flex-col gap-6 md:gap-2">
                     <li>
-                        <a class="underline" href="https://usevia.app/">Keyclack Launcher</a>
+                        <a class="underline" href="https://usevia.app/">Keychron Launcher</a>
                     </li>
                     <li>
                         <a class="underline" href="/about">About Us</a>

@@ -9,18 +9,10 @@ class Card extends HTMLElement {
                     border-radius: var(--radius-lg);
                     padding: 1rem;
                 }
-                #title > * {
-                    font-size: 1.25rem;
-                    font-weight: 400;
-                }
-                #content > * {
-                    font-size: 1rem;
-                }
             </style>
             <slot name="styles"></slot>
             <div class="card">
-                <slot id="title" name="title"></slot>
-                <slot id="content" name="content"></slot>
+                <slot></slot>
             </div>
         `;
         const templating = document.createElement('template')

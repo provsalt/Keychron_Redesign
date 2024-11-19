@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="Keyclack" name="description" />
-    <title>Keyclack</title>
+    <meta content="Keychron" name="description" />
+    <title>Keychron</title>
 
     <link as="style" href="css/utils.css" rel="preload" />
     <link as="style" href="css/styles.css" rel="preload" />
@@ -31,47 +31,56 @@
               The keyboard that <span class="highlight">fits</span> your needs.
             </h1>
             <p>
-              Keyclack is a fully customizable keyboard and fully programmable
+              Keychron is a fully customizable keyboard and fully programmable
             </p>
             <button>Shop now</button>
           </div>
-          <img alt="Keyclack" class="hero-image" src="public/hero.png" />
+          <img alt="Keychron" class="hero-image" src="public/hero.png" />
         </section>
-        <section class="flex flex-col features">
+        <section class="flex flex-col features gap-4">
           <div>
             <h1 class="text-4xl font-bold">Features</h1>
-            <p class="text-lg">Why choose Keyclack?</p>
+            <p class="text-lg">
+              Why you should choose Keychron keyboards
+            </p>
           </div>
-          <div class="flex flex-col md:flex-row gap-4">
-<!--            <card-component>-->
-<!--              <h1 class="text-2xl font-bold" slot="title">High Quality Components</h1>-->
-<!--                <div slot="content" class="">-->
-<!--                  <img class="object-cover" alt="High Quality Components" src="public/barebone-q1-jis.png" />-->
-<!--                  <p>-->
-<!--                    We use the best components to build our keyboards, so you can-->
-<!--                    enjoy a great typing experience.-->
-<!--                  </p>-->
-<!--                </div>-->
-<!--            </card-component>-->
-<!--            <card-component>-->
-<!--              <h1 class="text-2xl font-bold" slot="title">Compatible With All Devices</h1>-->
-<!--                <div slot="content" class="">-->
-<!--                  <img alt="High Quality Components" src="public/compatible.png" />-->
-<!--                  <p>-->
-<!--                    Keyclack keyboards are 100% compatible with multiple operating systems. Perfectly suitable for macOS, Windows, iOS, as well as Android.-->
-<!--                  </p>-->
-<!--                </div>-->
-<!--            </card-component>-->
-<!--            <card-component>-->
-<!--              <h1 class="text-2xl font-bold" slot="title">Compatible With All Devices</h1>-->
-<!--                <div slot="content" class="">-->
-<!--                  <img alt="High Quality Components" src="public/compatible.png" />-->
-<!--                  <p>-->
-<!--                    Keyclack keyboards are 100% compatible with multiple operating systems. Perfectly suitable for macOS, Windows, iOS, as well as Android.-->
-<!--                  </p>-->
-<!--                </div>-->
-<!--            </card-component>-->
+          <div class="flex flex-col gap-10">
+            <div class="flex flex-col-rev md:flex-row items-center gap-4">
+              <img alt="High Quality Components" class="object-cover features-image flex-shrink" src="public/q1/barebone-q1-jis.png" />
+              <div class="flex flex-col gap-6 flex-grow">
+                <h2 class="text-2xl font-bold">High Quality Components</h2>
+                <p>
+                  We use the best components to build our keyboards, so you can
+                  enjoy a great typing experience.
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-col-rev md:flex-row items-center gap-4">
+              <div class="flex flex-col gap-6 flex-grow">
+                <h2 class="text-2xl font-bold">Compatible With All Devices</h2>
+                <p>
+                  Keychron keyboards are 100% compatible with multiple operating systems. Perfectly suitable for macOS, Windows, iOS, as well as Android.
+                </p>
+              </div>
+              <img alt="Compatible With All Devices" class="object-cover features-image flex-shrink" src="public/compatible.png" />
+            </div>
+            <div class="flex flex-col-rev md:flex-row items-center gap-4">
+              <img alt="Open Source Firmware" class="object-cover features-image flex-shrink" src="public/rocket.png" />
+              <div class="flex flex-col gap-6 flex-grow">
+                <h2 class="text-2xl font-bold">Open Source Firmware and Software</h2>
+                <p>
+                    Our keyboards are fully programmable using either VIA and QMK and open source. You can customize your keyboard to your liking.
+                </p>
+              </div>
+            </div>
           </div>
+        </section>
+        <section class="grid cols-2 px-6">
+          <card-component>
+            <img alt="Keychron Q1 V2" class="object-cover" src="public/q1/q1.png"/>
+            <h2 class="text-2xl font-bold">Keychron Q1 V2</h2>
+            <p></p>
+          </card-component>
         </section>
       </main>
       <footer-component />
