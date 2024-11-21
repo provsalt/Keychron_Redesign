@@ -189,6 +189,10 @@ video {
   display:grid
 }
 
+.cols-1 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
 .cols-2 {
   grid-template-columns: repeat(2, 1fr);
 }
@@ -453,6 +457,14 @@ video {
 
   .md\:max-w-35dvw {
     max-width: 35dvw;
+  }
+
+  .md\:gap-8 {
+    gap: 4rem;
+  }
+
+  .md\:cols-2 {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
