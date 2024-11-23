@@ -23,6 +23,7 @@
 
 .main {
   display: flex;
+  margin-bottom: 4rem;
   flex-direction: column;
   gap: 1.5rem;
 }
@@ -44,18 +45,19 @@
 
 .hero-content {
   max-width: 30rem;
+  margin-bottom: 4rem;
 }
 
 .hero-content h1 {
   font-size: 2.5rem;
   font-weight: 900;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
 }
 
 .hero-content p {
   font-size: 1.25rem;
   font-weight: 400;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
 }
 
 .hero-content button {
