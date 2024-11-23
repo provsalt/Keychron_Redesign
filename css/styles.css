@@ -15,7 +15,7 @@
 }
 
 .highlight {
-    background: linear-gradient(90deg, #ff0099, #ff003b);
+    background: linear-gradient(in oklch 90deg, fuchsia, red);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
