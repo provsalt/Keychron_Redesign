@@ -1,8 +1,9 @@
 const base = import.meta.env.BASE_URL || ""
 
 const footer = `
-    <footer class="flex flex-col md:flex-row p-4 md:p-8 md:px-16 justify-between gap-6 shadow-md mt-4" style="background: rgba(0, 0, 0, 0.05)">
-        <section class="flex flex-col gap-4 md:max-w-35dvw">
+    <footer class="flex flex-col p-4 md:p-8 md:px-16 shadow-md mt-4 gap-6" style="background: rgba(0, 0, 0, 0.05)">
+        <div class="flex flex-col md:flex-row justify-between gap-6">
+            <section class="flex flex-col gap-4 md:max-w-35dvw">
             <h2 class="text-2xl font-bold">Keychron</h2>
             <p class="text-wrap">Keychron designs and produces custom and wireless productive and premium computer peripherals.</p>
             <ul class="flex">
@@ -68,24 +69,28 @@ const footer = `
                 </li>
             </ul>
         </section>
-        <section class="flex flex-col gap-4">
-            <h2 class="text-xl font-bold">Newsletter</h2>
-            <p>Sign up for exclusive offers, original stories, events and more.</p>
-            <form class="flex flex-col gap-2">
-                <label for="newsletter-email">Your email</label>
-                <div class="flex w-full border border-2 border-grey-900 text-gray-900"> 
-                    <input type="email" id="newsletter-email" placeholder="eg: me@raymond.moe" class="w-full p-2" style="border: 0;" required />
-                    <button type="submit" aria-label="Subscribe to newsletter" style="border: 0;">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 text-gray-900">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-</svg>
-
-
-                    </button>
-                </div>
-            </form>
+            <section class="flex flex-col gap-4">
+                <h2 class="text-xl font-bold">Newsletter</h2>
+                <p>Sign up for exclusive offers, original stories, events and more.</p>
+                <form class="flex flex-col gap-2">
+                    <label for="newsletter-email">Your email</label>
+                    <div class="flex w-full border border-2 border-grey-900 text-gray-900"> 
+                        <input type="email" id="newsletter-email" placeholder="eg: me@raymond.moe" class="w-full p-2" style="border: 0;" required />
+                        <button type="submit" aria-label="Subscribe to newsletter" style="border: 0;">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 text-gray-900">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+    </svg>
+    
+    
+                        </button>
+                    </div>
+                </form>
+            </section>
+        </div>
+        <section>
+            <hr style="display: block;height: 1px;border: 0;border-top: 1px solid #000000;margin: 0.5rem 0;padding: 0;"/>
+            <p>© 2024 Keychron | Mechanical Keyboards for Mac, Windows and Android</p>
         </section>
-        
     </footer>
 `
 
