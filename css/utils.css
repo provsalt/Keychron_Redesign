@@ -312,6 +312,11 @@ video {
   width:100%
 }
 
+.px-10dvw {
+  padding-right: 10dvw;
+  padding-left: 10dvw;
+}
+
 
 /* Text styles*/
 
@@ -465,6 +470,11 @@ video {
 
   .md\:cols-2 {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .md\:px-10dvw {
+    padding-right: 10dvw;
+    padding-left: 10dvw;
   }
 }
 
