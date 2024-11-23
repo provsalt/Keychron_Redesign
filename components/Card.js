@@ -1,8 +1,8 @@
 class Card extends HTMLElement {
-    constructor() {
-        super();
-        this.attachShadow({mode: 'open'});
-        const template = `
+  constructor() {
+    super();
+    this.attachShadow({ mode: "open" });
+    const template = `
             <style>
                 .card {
                     border: 1px solid #ccc;
@@ -15,10 +15,10 @@ class Card extends HTMLElement {
                 <slot></slot>
             </div>
         `;
-        const templating = document.createElement('template')
-        templating.innerHTML = template;
-        this.shadowRoot.appendChild(templating.content.cloneNode(true));
-    }
+    const templating = document.createElement("template");
+    templating.innerHTML = template;
+    this.shadowRoot.appendChild(templating.content.cloneNode(true));
+  }
 }
 
-customElements.define('card-component', Card);
+customElements.define("card-component", Card);

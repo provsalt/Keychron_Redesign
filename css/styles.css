@@ -15,10 +15,10 @@
 }
 
 .highlight {
-    background: linear-gradient(in oklch 90deg, fuchsia, red);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
+  background: linear-gradient(in oklch 90deg, fuchsia, red);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .main {
@@ -29,9 +29,9 @@
 }
 
 .hero-image {
-    width: 50%;
-    object-fit: cover;
-    transition: transform 0.2s ease-out;
+  width: 50%;
+  object-fit: cover;
+  transition: transform 0.2s ease-out;
 }
 
 .hero {
@@ -75,7 +75,6 @@
   max-width: 50%;
 }
 
-
 @media (max-width: 768px) {
   .main {
     flex-direction: column;
@@ -86,5 +85,4 @@
   .features-image {
     max-width: 100%;
   }
-
 }

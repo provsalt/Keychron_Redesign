@@ -1,4 +1,4 @@
-const base = import.meta.env.BASE_URL || ""
+const base = import.meta.env.BASE_URL || "";
 
 const footer = `
     <footer class="flex flex-col p-4 md:p-8 md:px-16 shadow-md mt-4 gap-6" style="background: rgba(0, 0, 0, 0.05)">
@@ -92,13 +92,13 @@ const footer = `
             <p>© 2024 Keychron | Mechanical Keyboards for Mac, Windows and Android</p>
         </section>
     </footer>
-`
+`;
 
 class Footer extends HTMLElement {
-    constructor() {
-        super();
-        this.innerHTML = footer
-    }
+  constructor() {
+    super();
+    this.innerHTML = footer;
+  }
 }
 
-customElements.define("footer-component", Footer)
+customElements.define("footer-component", Footer);
