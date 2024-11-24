@@ -24,6 +24,22 @@ html {
   scroll-behavior: smooth;
 }
 
+.app {
+  font-family: Inter, var(--font-primary), serif;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-dropdown);
+  box-shadow: var(--shadow-md);
+  padding: 0.75rem;
+  background: white;
+}
+
 /* Additional normalization because I hate default styles*/
 
 h1,
@@ -496,6 +512,11 @@ video {
   .md\:px-16 {
     padding-left: 4rem;
     padding-right: 4rem;
+  }
+
+  .md\:px-10vw {
+    padding-left: 10rem;
+    padding-right: 10rem;
   }
 
   .md\:max-w-35dvw {

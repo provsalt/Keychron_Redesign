@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keychron - Products</title>
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/utils.css" />
+    <link rel="stylesheet" href="/css/products.css" />
+
+    <script defer src="components/Navbar.js" type="module"></script>
+    <script defer src="components/Card.js" type="module"></script>
+    <script defer src="components/Footer.js" type="module"></script>
+  </head>
+  <body>
+    <div id="app" class="app">
+      <nav-bar class="header"></nav-bar>
+      <main class="products-page">
+        <div class="container">
+          <header class="products-header">
+            <h1 class="text-4xl font-bold mb-4">Our Keyboards</h1>
+            <p class="text-xl text-gray-600">
+              Discover your perfect mechanical keyboard
+            </p>
+          </header>
+
+          <!-- Filters and Sort -->
+          <div class="products-controls">
+            <div class="filters">
+              <div class="filter-group">
+                <label for="layout-filter">Layout</label>
+                <select id="layout-filter" data-filter="layout">
+                  <option value="all">All Layouts</option>
+                  <option value="65%">65% Layout</option>
+                  <option value="75%">75% Layout</option>
+                  <option value="TKL">TKL Layout</option>
+                </select>
+              </div>
+
+              <div class="filter-group">
+                <label>Price Range</label>
+                <div class="price-inputs">
+                  <input
+                    type="number"
+                    id="price-min"
+                    data-filter="price"
+                    data-price-type="min"
+                    placeholder="Min"
+                    min="0"
+                  />
+                  <span>to</span>
+                  <input
+                    type="number"
+                    id="price-max"
+                    data-filter="price"
+                    data-price-type="max"
+                    placeholder="Max"
+                  />
+                </div>
+              </div>
+
+              <div class="filter-group">
+                <label>Features</label>
+                <div class="feature-checkboxes">
+                  <label class="checkbox-label">
+                    <input
+                      type="checkbox"
+                      data-filter="features"
+                      value="wireless"
+                    />
+                    Wireless
+                  </label>
+                  <label class="checkbox-label">
+                    <input
+                      type="checkbox"
+                      data-filter="features"
+                      value="hot-swap"
+                    />
+                    Hot-swappable
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" data-filter="features" value="rgb" />
+                    RGB Lighting
+                  </label>
+                  <label class="checkbox-label">
+                    <input
+                      type="checkbox"
+                      data-filter="features"
+                      value="aluminum"
+                    />
+                    Aluminum Case
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="sort-section">
+              <label for="sort-select">Sort by</label>
+              <select id="sort-select">
+                <option value="featured">Featured</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="name">Name</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="active-filters" id="active-filters"></div>
+
+          <!-- Products Grid -->
+          <div class="products-grid" id="products-grid">
+            <div class="loading-skeleton">
+              <div class="skeleton-card"></div>
+              <div class="skeleton-card"></div>
+              <div class="skeleton-card"></div>
+              <div class="skeleton-card"></div>
+            </div>
+          </div>
+
+          <div class="flex flex-col md:flex-row items-center justify-center">
+            <div class="pagination-info">
+              Showing <span id="showing-count">0</span> of
+              <span id="total-count">0</span> products
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer-component></footer-component>
+    </div>
+    <script type="module">
+      import productsPage from "/js/products.js";
+      // hack to add productsPage to the current page.
+      document.addEventListener("DOMContentLoaded", () => {
+        productsPage.init();
+      });
+    </script>
+  </body>
+</html>
