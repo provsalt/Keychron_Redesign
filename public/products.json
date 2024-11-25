@@ -3,7 +3,7 @@
     "id": "q1-he",
     "name": "Keychron Q1 HE",
     "price": 199.99,
-    "image": "/public/q1/q1_he.png",
+    "image": "/q1/q1_he.png",
     "layout": "75%",
     "features": ["Rapid Trigger", "Built for E-Sports", "Aluminium Case"],
     "description": "High-end mechanical keyboard with Hall Effect switches"
@@ -12,7 +12,7 @@
     "id": "q1-v2",
     "name": "Keychron Q1 V2",
     "price": 179.99,
-    "image": "/public/q1/q1.png",
+    "image": "/q1/q1.png",
     "layout": "75%",
     "features": ["Knob Version", "Highly Customizable", "Aluminium Case"],
     "description": "Premium mechanical keyboard with rotary knob"
@@ -21,7 +21,7 @@
     "id": "v1-max",
     "name": "Keychron V1 Max",
     "price": 129.99,
-    "image": "/public/v1/v1_max.png",
+    "image": "/v1/v1_max.png",
     "layout": "75%",
     "features": ["QMK/VIA Support", "Wireless Support", "Plastic Case"],
     "description": "Wireless mechanical keyboard with premium features"
@@ -30,7 +30,7 @@
     "id": "q2-max",
     "name": "Keychron Q2 Max",
     "price": 189.99,
-    "image": "/public/q2/q2_max.png",
+    "image": "/q2/q2_max.png",
     "layout": "65%",
     "features": ["Compact Size", "Wireless Support", "Aluminium Case"],
     "description": "Compact wireless mechanical keyboard"

@@ -9,22 +9,22 @@ const footer = `
             <ul class="flex">
                 <li>
                     <a href="#">
-                        <img alt="YouTube" src="${base}/public/icons/YouTube.svg" />
+                        <img alt="YouTube" src="${base}/icons/YouTube.svg" />
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <img alt="Instagram" src="${base}/public/icons/Instagram.svg" />
+                        <img alt="Instagram" src="${base}/icons/Instagram.svg" />
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <img alt="X (formally Twitter)" src="${base}/public/icons/X.svg" />
+                        <img alt="X (formally Twitter)" src="${base}/icons/X.svg" />
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <img alt="Discord" src="${base}/public/icons/Discord.svg" />
+                        <img alt="Discord" src="${base}/icons/Discord.svg" />
                     </a>
                 </li>
             </ul>
