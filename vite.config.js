@@ -5,10 +5,10 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: './index.html',
-        products: './products.html',
+        main: "./index.html",
+        products: "./products.html",
         configure: "./configure.html",
-      }
-    }
-  }
+      },
+    },
+  },
 });
