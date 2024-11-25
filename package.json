@@ -3,15 +3,29 @@
     "three": "^0.170.0"
   },
   "devDependencies": {
-    "prettier": "3.3.3",
     "@types/bun": "latest",
+    "eslint": "^9.15.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.10",
+    "prettier": "3.3.3",
     "vite": "^5.4.10"
   },
   "type": "module",
   "scripts": {
     "format": "prettier --write .",
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "prepare": "husky",
+    "lint-staged": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.{json,md,yml,yaml,css,scss,html}": [
+      "prettier --write"
+    ]
   },
   "name": "fed-assignment-1"
 }
