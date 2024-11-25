@@ -122,8 +122,11 @@ class ProductsPage {
                 const maxPrice = this.filters.price.max || Infinity;
                 const priceMatch = product.price >= minPrice && product.price <= maxPrice;
 
+                // does the product have all the selected features?
                 const featuresMatch = !this.filters.features.length ||
-                    this.filters.features.every(f => product.features.includes(f));
+                    this.filters.features.every(filtered => {
+                        return product.features.some(feat => { return feat.toLowerCase().includes(filtered.toLowerCase())})
+                    });
 
                 return layoutMatch && priceMatch && featuresMatch;
             })
