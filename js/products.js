@@ -1,5 +1,5 @@
 import { utils } from "./utils.js";
-import products from "/public/products.json";
+import products from "/src/products.json";
 
 class ProductsPage {
   constructor() {
