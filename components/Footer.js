@@ -1,4 +1,4 @@
-const base = import.meta.env.BASE_URL || "";
+import { utils } from "../js/utils.js";
 
 const footer = `
     <footer class="flex flex-col p-4 md:p-8 md:px-16 shadow-md mt-4 gap-6" style="background: rgba(0, 0, 0, 0.05)">
@@ -9,22 +9,22 @@ const footer = `
             <ul class="flex">
                 <li>
                     <a href="#">
-                        <img alt="YouTube" src="${base}/icons/YouTube.svg" />
+                        <img alt="YouTube" src="${utils.base_url}/icons/YouTube.svg" />
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <img alt="Instagram" src="${base}/icons/Instagram.svg" />
+                        <img alt="Instagram" src="${utils.base_url}/icons/Instagram.svg" />
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <img alt="X (formally Twitter)" src="${base}/icons/X.svg" />
+                        <img alt="X (formally Twitter)" src="${utils.base_url}/icons/X.svg" />
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <img alt="Discord" src="${base}/icons/Discord.svg" />
+                        <img alt="Discord" src="${utils.base_url}/icons/Discord.svg" />
                     </a>
                 </li>
             </ul>
@@ -36,13 +36,13 @@ const footer = `
                         <a class="underline" href="https://usevia.app/">Keychron Launcher</a>
                     </li>
                     <li>
-                        <a class="underline" href="/about">About Us</a>
+                        <a class="underline" href="${utils.base_url}/about">About Us</a>
                     </li>
                     <li>
-                        <a class="underline" href="/about#contact">Contact Us</a>
+                        <a class="underline" href="${utils.base_url}/about#contact">Contact Us</a>
                     </li>
                     <li>
-                        <a class="underline" href="/store/gift-card">Gift Cards</a>
+                        <a class="underline" href="${utils.base_url}/store/gift-card">Gift Cards</a>
                     </li>
                 </ul>
         </section>
@@ -50,22 +50,22 @@ const footer = `
             <h2 class="text-xl font-bold mb-4">Help & Support</h2>
             <ul class="flex flex-col gap-6 md:gap-2">
                 <li>
-                    <a class="underline" href="/manual">User Manual</a>
+                    <a class="underline" href="${utils.base_url}/manual">User Manual</a>
                 </li>
                 <li>
-                    <a class="underline" href="/firmware">Firmwares</a>
+                    <a class="underline" href="${utils.base_url}/firmware">Firmwares</a>
                 </li>
                 <li>
-                    <a class="underline" href="/help">Help Center</a>
+                    <a class="underline" href="${utils.base_url}/help">Help Center</a>
                 </li>
                 <li>
-                    <a class="underline" href="/policies#privacy">Privacy Policy</a>
+                    <a class="underline" href="${utils.base_url}/policies#privacy">Privacy Policy</a>
                 </li>
                 <li>
-                    <a class="underline" href="/policies#refund">Refund policy</a>
+                    <a class="underline" href="${utils.base_url}/policies#refund">Refund policy</a>
                 </li>
                 <li>
-                    <a class="underline" href="/policies#terms">Terms of Service</a>
+                    <a class="underline" href="${utils.base_url}/policies#terms">Terms of Service</a>
                 </li>
             </ul>
         </section>
