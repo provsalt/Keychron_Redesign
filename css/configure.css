@@ -156,6 +156,16 @@
   object-fit: contain;
 }
 
+#toast {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 2px solid var(--secondary);
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius-md);
+}
+
 @media screen and (min-width: 769px) {
   #container {
     grid-template-columns: 3fr 2fr;

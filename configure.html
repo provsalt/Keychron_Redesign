@@ -18,7 +18,7 @@
       <header class="header">
         <nav-bar></nav-bar>
       </header>
-      <main class="min-h-screen px-6 py-4 md:px-12 md:py-8">
+      <main class="min-h-screen relative px-6 py-4 md:px-12 md:py-8">
         <div id="container" class="m-0 grid gap-4 md:gap-8">
           <section class="border-4 rounded-lg p-8 shadow-md">
             <div class="relative bg-secondary aspect-16-9">
@@ -137,6 +137,10 @@
             </div>
           </section>
         </div>
+        <div
+          id="toast"
+          class="flex bg-white shadow-md rounded-md hidden to-show"
+        ></div>
       </main>
       <footer-component></footer-component>
     </div>

@@ -225,11 +225,12 @@ class KeyboardConfigurator {
     };
 
     try {
-      const cart = JSON.parse(utils.storage.getItem("cart") || "[]");
+      const cart = utils.storage.get("cart") || [];
+      console.log(cart);
       cart.push(cartItem);
-      utils.storage.setItem("cart", JSON.stringify(cart));
+      utils.storage.set("cart", cart);
 
-      this.showSuccess("Added to cart successfully");
+      this.showSuccess("Added to cart successfully. Redirecting to cart...");
     } catch (error) {
       console.error("Error adding to cart:", error);
       this.showError("Failed to add to cart");
@@ -319,13 +320,53 @@ class KeyboardConfigurator {
   }
 
   showError(message) {
-    // TODO: Implementation of error toast/notification
     console.error(message);
+    const toast = document.querySelector("#toast");
+    toast.innerHTML = `
+        <div class="p-2 rounded-md">
+            <div class="flex items-center gap-2 text-red">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" height="32" width="32">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+                <div>
+                  <h3 class="font-bold text-black">Error</h3>
+                  
+                  <span class="block text-base">${message}</span>
+                </div>
+            </div>
+        </div>
+    `;
+    toast.classList.remove("hidden");
+    setTimeout(() => {
+      toast.classList.add("hidden");
+      toast.innerHTML = "";
+    }, 5000);
   }
 
   showSuccess(message) {
-    // TODO: Implementation of success toast/notification and redirect
+    const toast = document.querySelector("#toast");
+    toast.innerHTML = `
+        <div class="p-2 rounded-md">
+            <div class="flex items-center gap-2 text-green">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" height="24" width="24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+                <div>
+                  <h3 class="font-bold text-black">Success</h3>
+                  
+                  <span class="block text-base">${message}</span>
+                </div>
+            </div>
+        </div>
+    `;
+    toast.classList.remove("hidden");
+
     console.log(message);
+    setTimeout(() => {
+      toast.classList.add("hidden");
+      toast.innerHTML = "";
+      window.location.href = utils.base_url + "/cart";
+    }, 3000);
   }
 }
 
