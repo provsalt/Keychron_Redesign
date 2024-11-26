@@ -40,6 +40,17 @@ class KeyboardConfigurator {
       configNav: document.querySelector(".config-nav"),
       addToCartButton: document.getElementById("add-to-cart"),
       viewControls: document.querySelector(".view-controls"),
+      price: {
+        keyboard: document.getElementById("keyboard-price"),
+        switch: document.getElementById("switch-price"),
+        layout: document.getElementById("layout-price"),
+        total: document.getElementById("total-price"),
+      },
+      selected: {
+        keyboard: document.getElementById("selected-keyboard"),
+        switch: document.getElementById("selected-switch"),
+        layout: document.getElementById("selected-layout"),
+      },
     };
 
     this.init();
@@ -73,6 +84,7 @@ class KeyboardConfigurator {
 
       // Set initial preview image
       this.updatePreviewImage();
+      this.updateSummary();
 
       return keyboard;
     } catch (error) {
@@ -111,6 +123,7 @@ class KeyboardConfigurator {
 
       const colorName = button.dataset.colorName;
       this.selectColor(colorName);
+      this.updateSummary();
     });
 
     this.elements.switchOptions.addEventListener("click", (e) => {
@@ -119,6 +132,7 @@ class KeyboardConfigurator {
 
       const switchName = button.dataset.switchName;
       this.selectSwitch(switchName);
+      this.updateSummary();
     });
 
     this.elements.layoutOptions.addEventListener("click", (e) => {
@@ -127,6 +141,7 @@ class KeyboardConfigurator {
 
       const layoutName = button.dataset.switchName;
       this.selectLayout(layoutName);
+      this.updateSummary();
     });
 
     this.elements.addToCartButton.addEventListener("click", () => {
@@ -252,6 +267,15 @@ class KeyboardConfigurator {
     }
 
     return true;
+  }
+
+  updateSummary() {
+    this.elements.selected.keyboard.textContent = this.state.keyboard.name;
+    this.elements.selected.switch.textContent = this.state.selectedSwitch;
+    this.elements.selected.layout.textContent = this.state.selectedLayout;
+
+    this.elements.price.keyboard.textContent = `$${this.state.keyboard.price}`;
+    this.elements.price.total.textContent = `$${this.calculatePrice()}`;
   }
 
   calculatePrice() {
