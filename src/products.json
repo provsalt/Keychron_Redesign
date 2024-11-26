@@ -6,11 +6,36 @@
     "image": "/q1/q1_he.png",
     "layout": "75%",
     "features": ["Rapid Trigger", "Built for E-Sports", "Aluminium Case"],
+    "colours": [
+      {
+        "name": "Carbon Black",
+        "image": "/q1/q1_he_black.png"
+      },
+      {
+        "name": "Shell White",
+        "image": "/q1/q1_he_white.png"
+      }
+    ],
+    "switches": {
+      "name": "Hall Effect",
+      "image": "/switches/nebula.png"
+    },
     "description": "High-end mechanical keyboard with Hall Effect switches"
   },
   {
     "id": "q1-v2",
     "name": "Keychron Q1 V2",
+    "colour": [
+      {
+        "name": "Carbon Black",
+        "image": "/q1/q1_v2_black.png"
+      },
+      {
+        "name": "Silver Grey",
+        "image": "/q1/q1_v2_grey.png"
+      }
+    ],
+
     "price": 179.99,
     "image": "/q1/q1.png",
     "layout": "75%",

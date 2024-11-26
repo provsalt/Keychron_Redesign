@@ -2,10 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link href="css/normalize.css" rel="stylesheet" />
-    <link href="css/utils.css" rel="stylesheet" />
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="/css/normalize.css" rel="stylesheet" />
+    <link href="/css/utils.css" rel="stylesheet" />
 
     <script defer src="components/Navbar.js" type="module"></script>
     <script defer src="components/Card.js" type="module"></script>
@@ -18,8 +18,24 @@
         <nav-bar></nav-bar>
       </header>
       <main id="main" class="main px-10dvw">
-        <h1 class="text-3xl font-bold">Configure</h1>
-        <p id="description">Configure your new %KEYBOARD% to your liking.</p>
+        <div class="flex flex-col-rev md:flex-row">
+          <section class="flex-1">
+            <img id="keyboard-image" alt="%KEYBOARD%" class="w-full" />
+            <p>%KEYBOARD%</p>
+          </section>
+          <section class="flex-1">
+            <div class="flex flex-col gap-2">
+              <h1 class="text-2xl font-bold">Configure</h1>
+              <p class="font-light" id="description">
+                Configure your new %KEYBOARD% to your liking.
+              </p>
+            </div>
+            <section id="colour-section"></section>
+            <section id="type-section"></section>
+            <section id="switch-section"></section>
+            <section id="layout-section"></section>
+          </section>
+        </div>
       </main>
       <footer-component></footer-component>
     </div>
