@@ -19,7 +19,8 @@
     "switches": [
       {
         "name": "Gateron Nebula Dual-Rail",
-        "image": "/switches/nebula.png"
+        "image": "/switches/nebula.png",
+        "description": "Linear switch with a smooth keystroke"
       }
     ],
     "description": "High-end mechanical keyboard with Hall Effect switches"

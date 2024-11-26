@@ -18,25 +18,122 @@
       <header class="header">
         <nav-bar></nav-bar>
       </header>
-      <main id="main" class="main px-10dvw">
-        <div class="flex flex-col-rev md:flex-row gap-2">
-          <section class="flex-1 flex items-center md:items-start flex-col">
-            <h2 class="text-2xl font-bold md:hidden">Your %KEYBOARD%</h2>
-            <img id="keyboard-image" alt="%KEYBOARD%" class="w-full" />
-            <p>%KEYBOARD%</p>
-          </section>
-          <section class="flex-1">
-            <div class="flex flex-col gap-2">
-              <h1 class="text-3xl font-bold">Configure</h1>
-              <p class="font-light mb-4" id="description">
-                Configure your new %KEYBOARD% to your liking.
-              </p>
+      <main class="min-h-screen px-6 py-4 md:px-12 md:py-8">
+        <div id="container" class="m-0 grid gap-4 md:gap-8">
+          <section class="border-4 rounded-lg p-8 shadow-md">
+            <div class="relative bg-secondary aspect-16-9">
+              <img
+                id="keyboard-preview"
+                src=""
+                alt="Keyboard Preview"
+                class="w-full h-full object-contain"
+              />
+              <div class="absolute view-controls flex gap-2 p-2">
+                <button class="view-control active p-2 px-4" data-view="2d">
+                  2D View
+                </button>
+                <button class="view-control p-2 px-4" data-view="3d">
+                  3D View
+                </button>
+              </div>
             </div>
-            <div class="flex flex-col gap-4">
-              <section id="colour-section"></section>
-              <section id="type-section"></section>
-              <section id="switch-section"></section>
-              <section id="layout-section"></section>
+          </section>
+
+          <section class="bg-white p-8 rounded-lg shadow-md">
+            <header class="mb-8">
+              <h1 id="keyboard-name" class="font-bold text-3xl mb-4"></h1>
+              <p class="config-subtitle">Customize your keyboard</p>
+            </header>
+
+            <nav class="config-nav flex gap-4 mb-8 p-2 bg-secondary">
+              <button
+                class="config-nav-item flex border-none items-center justify-center gap-2 p-3 b active bg-white rounded-md"
+                data-section="color"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  width="24"
+                  height="24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4.098 19.902a3.75 3.75 0 0 0 5.304 0l6.401-6.402M6.75 21A3.75 3.75 0 0 1 3 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 0 0 3.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.439 1.15-.439 1.59 0l3.712 3.713c.44.44.44 1.152 0 1.59l-2.879 2.88M6.75 17.25h.008v.008H6.75v-.008Z"
+                  />
+                </svg>
+                Color
+              </button>
+              <button
+                class="config-nav-item flex border-none items-center justify-center gap-2 p-3 b active bg-white rounded-md"
+                data-section="switches"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  width="24"
+                  height="24"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m21 7.5-9-5.25L3 7.5m18 0-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"
+                  />
+                </svg>
+                Switches
+              </button>
+              <button
+                class="config-nav-item flex border-none items-center justify-center gap-2 p-3 b active bg-white rounded-md"
+                data-section="layout"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  width="24"
+                  height="24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"
+                  />
+                </svg>
+                Layout
+              </button>
+            </nav>
+
+            <div class="config-panel active" id="color-panel">
+              <h2 class="panel-title">Select Color</h2>
+              <div class="color-options" id="color-options"></div>
+            </div>
+
+            <div class="config-panel" id="switches-panel">
+              <h2 class="panel-title">Choose Your Switches</h2>
+              <div class="switch-options" id="switch-options"></div>
+            </div>
+
+            <div class="config-panel" id="layout-panel">
+              <h2 class="panel-title">Keyboard Layout</h2>
+              <div class="layout-options" id="layout-options"></div>
+            </div>
+
+            <div class="flex gap-4">
+              <button
+                class="flex p-4 border-none bg-primary text-secondary font-bold rounded-md"
+                id="add-to-cart"
+              >
+                Add to Cart
+              </button>
             </div>
           </section>
         </div>

@@ -5,6 +5,9 @@
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
   --primary: #ff7b4b;
+  --secondary: #f5f5f5;
+  --text-primary: #1a1a1a;
+  --base: #666;
 
   --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -196,6 +199,10 @@ video {
 
 /* Flex and Grid utils */
 
+.block {
+  display: block;
+}
+
 .flex {
   display: flex;
 }
@@ -288,12 +295,29 @@ video {
   padding-bottom: 0.75rem;
 }
 
+.py-3 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.p-8 {
+  padding: 2rem;
+}
+
 .p-3 {
   padding: 0.75rem;
 }
 
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+
 .mb-4 {
   margin-bottom: 1rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
 }
 
 .w-4 {
@@ -320,8 +344,21 @@ video {
   padding: 0;
 }
 
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .w-full {
   width: 100%;
+}
+
+.min-w-screen {
+  min-width: 100vw;
+}
+
+.h-full {
+  height: 100%;
 }
 
 .px-10dvw {
@@ -381,6 +418,10 @@ video {
 
 .object-cover {
   object-fit: cover;
+}
+
+.object-contain {
+  object-fit: contain;
 }
 
 .hidden {
@@ -443,6 +484,14 @@ video {
   border-radius: var(--radius-sm);
 }
 
+.rounded-md {
+  border-radius: var(--radius-md);
+}
+
+.rounded-lg {
+  border-radius: var(--radius-lg);
+}
+
 .rounded-full {
   border-radius: var(--radius-full);
 }
@@ -450,6 +499,10 @@ video {
 .border {
   border-width: 1px;
   border-style: solid;
+}
+
+.border-none {
+  border: none;
 }
 
 .border-4 {
@@ -473,8 +526,40 @@ video {
   color: rgba(255, 255, 255, 0.95);
 }
 
+.text-secondary {
+  color: var(--secondary);
+}
+
+.text-base {
+  color: var(--base);
+}
+
 .bg-primary {
   background-color: var(--primary);
+}
+
+.bg-secondary {
+  background-color: var(--secondary);
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.aspect-16-9 {
+  aspect-ratio: 16/9;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
 }
 
 /* Animations */
@@ -546,6 +631,23 @@ video {
 
   .md\:max-w-1\/2 {
     max-width: 50%;
+  }
+
+  .md\:max-w-1\/4 {
+    max-width: 25%;
+  }
+
+  .md\:max-h-10 {
+    max-width: 2.5rem;
+  }
+  .md\:px-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .md\:py-8 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 }
 
