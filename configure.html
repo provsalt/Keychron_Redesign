@@ -6,6 +6,7 @@
 
     <link href="/css/normalize.css" rel="stylesheet" />
     <link href="/css/utils.css" rel="stylesheet" />
+    <link href="/css/configure.css" rel="stylesheet" />
 
     <script defer src="components/Navbar.js" type="module"></script>
     <script defer src="components/Card.js" type="module"></script>
@@ -18,22 +19,25 @@
         <nav-bar></nav-bar>
       </header>
       <main id="main" class="main px-10dvw">
-        <div class="flex flex-col-rev md:flex-row">
-          <section class="flex-1">
+        <div class="flex flex-col-rev md:flex-row gap-2">
+          <section class="flex-1 flex items-center md:items-start flex-col">
+            <h2 class="text-2xl font-bold md:hidden">Your %KEYBOARD%</h2>
             <img id="keyboard-image" alt="%KEYBOARD%" class="w-full" />
             <p>%KEYBOARD%</p>
           </section>
           <section class="flex-1">
             <div class="flex flex-col gap-2">
-              <h1 class="text-2xl font-bold">Configure</h1>
-              <p class="font-light" id="description">
+              <h1 class="text-3xl font-bold">Configure</h1>
+              <p class="font-light mb-4" id="description">
                 Configure your new %KEYBOARD% to your liking.
               </p>
             </div>
-            <section id="colour-section"></section>
-            <section id="type-section"></section>
-            <section id="switch-section"></section>
-            <section id="layout-section"></section>
+            <div class="flex flex-col gap-4">
+              <section id="colour-section"></section>
+              <section id="type-section"></section>
+              <section id="switch-section"></section>
+              <section id="layout-section"></section>
+            </div>
           </section>
         </div>
       </main>

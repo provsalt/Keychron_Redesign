@@ -3,23 +3,25 @@
     "id": "q1-he",
     "name": "Keychron Q1 HE",
     "price": 199.99,
-    "image": "/q1/q1_he.png",
+    "image": "/q1_he/q1_he.png",
     "layout": "75%",
     "features": ["Rapid Trigger", "Built for E-Sports", "Aluminium Case"],
     "colours": [
       {
         "name": "Carbon Black",
-        "image": "/q1/q1_he_black.png"
+        "image": "/q1_he/q1_he_carbon_black.png"
       },
       {
         "name": "Shell White",
-        "image": "/q1/q1_he_white.png"
+        "image": "/q1_he/q1_he_shell_white.png"
       }
     ],
-    "switches": {
-      "name": "Hall Effect",
-      "image": "/switches/nebula.png"
-    },
+    "switches": [
+      {
+        "name": "Gateron Nebula Dual-Rail",
+        "image": "/switches/nebula.png"
+      }
+    ],
     "description": "High-end mechanical keyboard with Hall Effect switches"
   },
   {

@@ -1,6 +1,5 @@
 export const utils = {
   base_url: import.meta.env.BASE_URL || "",
-
   dom: {
     $(selector, parent = document) {
       return parent.querySelector(selector);

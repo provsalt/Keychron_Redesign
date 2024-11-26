@@ -535,6 +535,18 @@ video {
     padding-right: 10dvw;
     padding-left: 10dvw;
   }
+
+  .md\:hidden {
+    display: none;
+  }
+
+  .md\:items-start {
+    align-items: start;
+  }
+
+  .md\:max-w-1\/2 {
+    max-width: 50%;
+  }
 }
 
 /* Accessibility */
