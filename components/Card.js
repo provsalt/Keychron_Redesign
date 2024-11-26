@@ -1,3 +1,5 @@
+import { utils } from "../js/utils.js";
+
 class Card extends HTMLElement {
   constructor() {
     super();
@@ -29,7 +31,7 @@ class ProductCard extends HTMLElement {
 
   // allow them to be updated
   static get observedAttributes() {
-    return ["name", "price", "image", "features", "layout"];
+    return ["data-product-id", "name", "price", "image", "features", "layout"];
   }
 
   connectedCallback() {
@@ -44,6 +46,7 @@ class ProductCard extends HTMLElement {
 
   get template() {
     const name = this.getAttribute("name");
+    const id = this.getAttribute("data-product-id");
     const price = this.getAttribute("price");
     const image = this.getAttribute("image");
     const features = JSON.parse(this.getAttribute("features") || "[]");
@@ -51,6 +54,13 @@ class ProductCard extends HTMLElement {
 
     return `
       <style>
+        a {
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
         :host {
           display: block;
           font-family: var(--font-primary);
@@ -185,12 +195,12 @@ class ProductCard extends HTMLElement {
               .join("")}
           </div>
           <div class="actions">
-            <button class="button secondary" onclick="this.getRootNode().host.dispatchEvent(new CustomEvent('learn-more'))">
+            <a href="#" class="button secondary">
               Learn More
-            </button>
-            <button class="button primary" onclick="this.getRootNode().host.dispatchEvent(new CustomEvent('configure'))">
+            </a>
+            <a href="${utils.base_url}/configure?keyboard=${id}" class="button primary">
               Configure
-            </button>
+            </a>
           </div>
         </div>
       </div>

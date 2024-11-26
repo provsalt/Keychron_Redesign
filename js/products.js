@@ -92,20 +92,6 @@ class ProductsPage {
       this.render();
     });
 
-    // add event listener to custom element
-    const productsGrid = document.getElementById("products-grid");
-    if (productsGrid) {
-      productsGrid.addEventListener("configure", (e) => {
-        const productId = e.target.getAttribute("data-product-id");
-        window.location.href = `/configure/${productId}`;
-      });
-
-      productsGrid.addEventListener("learn-more", (e) => {
-        const productId = e.target.getAttribute("data-product-id");
-        window.location.href = `/products/${productId}`;
-      });
-    }
-
     document
       .getElementById("active-filters")
       ?.addEventListener("click", (e) => {
