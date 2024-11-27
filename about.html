@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keychron - About us</title>
+
+    <link href="/css/normalize.css" rel="stylesheet" />
+    <link href="/css/utils.css" rel="stylesheet" />
+
+    <script defer src="components/Navbar.js" type="module"></script>
+    <script defer src="components/Card.js" type="module"></script>
+    <script defer src="components/Footer.js" type="module"></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav-bar />
+    </header>
+    <main class="container py-4 px-4 min-h-screen">
+      <article
+        class="flex flex-col md:flex-row items-center justify-center gap-6"
+      >
+        <div class="flex-1 flex flex-col gap-4">
+          <h1 class="text-3xl font-bold">About Us</h1>
+          <p>
+            Keychron was formed in 2017 by a group of keyboard enthusiasts who
+            have extensive experience in keyboard manufacturing. The group
+            consists of designers, marketers, and production experts. Our core
+            team members, Will Ye has 9 years of experience in keyboard
+            production and related businesses and Sven Zhu has 10 years of
+            experience in industrial design. We dedicate ourselves to creating
+            the most sophisticated mechanical keyboards with minimalist designs.
+            <br class="mb-4" />
+            We’ve partnered a factory with 20 years of experience, which
+            produces top-notch keyboards for many well-known keyboard brands
+            over the years. We can assure you that the Keychron keyboard will
+            never fail you.
+          </p>
+        </div>
+        <div class="flex-1">
+          <img alt="Keyboard background about image" src="/about.png" />
+        </div>
+      </article>
+    </main>
+    <footer-component />
+  </body>
+</html>

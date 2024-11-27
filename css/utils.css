@@ -24,14 +24,20 @@
 }
 
 html {
+  font-family: var(--font-primary), sans-serif;
   scroll-behavior: smooth;
 }
 
 .app {
-  font-family: Inter, var(--font-primary), serif;
+  font-family: Inter, var(--font-primary);
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .header {
@@ -295,7 +301,7 @@ video {
   padding-bottom: 0.75rem;
 }
 
-.py-3 {
+.py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
