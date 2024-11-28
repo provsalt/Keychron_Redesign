@@ -241,6 +241,10 @@ video {
   flex-shrink: 1;
 }
 
+.flex-start {
+  align-items: start;
+}
+
 .flex-grow {
   flex-grow: 1;
 }
@@ -681,6 +685,9 @@ video {
   .md\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+  .md\:flex-start {
+    align-items: start;
   }
 }
 

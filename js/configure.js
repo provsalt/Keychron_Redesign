@@ -242,7 +242,7 @@ class KeyboardConfigurator {
     try {
       const cart = utils.storage.get("cart") || [];
       console.log(cart);
-      cart.push(cartItem);
+      cart.push({ ...cartItem, image: this.elements.preview.src });
       utils.storage.set("cart", cart);
 
       this.showSuccess("Added to cart successfully. Redirecting to cart...");
