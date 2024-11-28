@@ -2,7 +2,51 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keychron - About us</title>
+
+    <link href="/css/normalize.css" rel="stylesheet" />
+    <link href="/css/utils.css" rel="stylesheet" />
+    <link href="/css/cart.css" rel="stylesheet" />
+
+    <script defer src="components/Navbar.js" type="module"></script>
+    <script defer src="components/Footer.js" type="module"></script>
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <nav-bar />
+    </header>
+    <main id="container" class="container grid p-4 gap-4">
+      <section
+        class="border border-2 border-secondary rounded-md p-4 shadow-md"
+      >
+        <h1 class="font-bold text-3xl">Cart</h1>
+        <div id="cart-items" class="flex flex-col gap-4"></div>
+      </section>
+      <section
+        class="border border-2 border-secondary rounded-md p-4 shadow-md flex flex-col gap-4"
+      >
+        <h2 class="font-bold text-3xl">Summary</h2>
+        <div class="flex flex-col gap-2">
+          <div class="flex justify-between text-base items-center">
+            <p>Subtotal</p>
+            <p id="subtotal-price" class="font-bold text-black"></p>
+          </div>
+          <div class="flex justify-between text-base items-center">
+            <p>Shipping</p>
+            <p class="font-bold">Calculated at checkout</p>
+          </div>
+          <div class="flex justify-between text-base items-center">
+            <p>Tax</p>
+            <p class="font-bold text-black"></p>
+          </div>
+          <div class="flex justify-between text-base items-center">
+            <p>Total</p>
+            <p id="total-price" class="font-bold text-black"></p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer-component />
+  </body>
 </html>
