@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Keychron - About us</title>
+    <title>Keychron - Cart</title>
 
     <link href="/css/normalize.css" rel="stylesheet" />
     <link href="/css/utils.css" rel="stylesheet" />
@@ -16,14 +16,15 @@
     <header class="header">
       <nav-bar />
     </header>
-    <main id="container" class="container grid p-4 gap-4">
+    <main id="container" class="container flex flex-col md:flex-row p-4 gap-4">
       <section
-        class="border border-2 border-secondary rounded-md p-4 shadow-md"
+        class="border border-2 border-secondary rounded-md p-4 shadow-md flex-grow"
       >
         <h1 class="font-bold text-3xl">Cart</h1>
         <div id="cart-items" class="flex flex-col gap-4"></div>
       </section>
       <section
+        id="cart"
         class="border border-2 border-secondary rounded-md p-4 shadow-md flex flex-col gap-4"
       >
         <h2 class="font-bold text-3xl">Summary</h2>
@@ -38,7 +39,7 @@
           </div>
           <div class="flex justify-between text-base items-center">
             <p>Tax</p>
-            <p class="font-bold text-black"></p>
+            <p id="tax-price" class="font-bold text-black"></p>
           </div>
           <div class="flex justify-between text-base items-center">
             <p>Total</p>
@@ -48,5 +49,6 @@
       </section>
     </main>
     <footer-component />
+    <script type="module" src="/js/cart.js"></script>
   </body>
 </html>
