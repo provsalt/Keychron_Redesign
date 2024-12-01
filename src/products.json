@@ -28,7 +28,7 @@
   {
     "id": "q1-v2",
     "name": "Keychron Q1 V2",
-    "colour": [
+    "colours": [
       {
         "name": "Carbon Black",
         "image": "/q1/q1_v2_black.png"
@@ -36,11 +36,32 @@
       {
         "name": "Silver Grey",
         "image": "/q1/q1_v2_grey.png"
+      },
+      {
+        "name": "Navy Blue",
+        "image": "/q1/q1_v2_navy_blue.png"
+      }
+    ],
+    "switches": [
+      {
+        "name": "Gateron G Pro Red",
+        "image": "/switches/g_pro_red.png",
+        "description": "Smooth linear switch with a light actuation force."
+      },
+      {
+        "name": "Gateron G Pro Blue",
+        "image": "/switches/g_pro_blue.png",
+        "description": "Clicky switch with tactile feedback and audible click."
+      },
+      {
+        "name": "Gateron G Pro Brown",
+        "image": "/switches/g_pro_brown.png",
+        "description": "Tactile switch with a gentle bump and moderate actuation force."
       }
     ],
 
     "price": 179.99,
-    "image": "/q1/q1.png",
+    "image": "/q1/q1_v2_black.png",
     "layout": "75%",
     "features": ["Knob Version", "Highly Customizable", "Aluminium Case"],
     "description": "Premium mechanical keyboard with rotary knob"

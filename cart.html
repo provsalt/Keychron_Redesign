@@ -13,52 +13,54 @@
     <script defer src="components/Footer.js" type="module"></script>
   </head>
   <body>
-    <header class="header">
-      <nav-bar />
-    </header>
-    <main
-      id="container"
-      class="container flex-1 flex flex-col md:flex-row md:flex-start p-4 gap-4"
-    >
-      <section
-        class="border border-2 border-secondary rounded-md p-4 shadow-md flex-1"
+    <div class="app">
+      <header class="header">
+        <nav-bar />
+      </header>
+      <main
+        id="container"
+        class="container w-full flex-1 flex flex-col md:flex-row md:flex-start p-4 gap-4"
       >
-        <h1 class="font-bold text-3xl">Cart</h1>
-        <div id="cart-items" class="flex flex-col gap-4"></div>
-      </section>
-      <section
-        id="cart"
-        class="border border-2 border-secondary rounded-md p-4 shadow-md flex flex-col gap-4"
-      >
-        <h2 class="font-bold text-3xl">Summary</h2>
-        <div class="flex flex-col gap-2">
-          <div class="flex justify-between text-base items-center">
-            <p>Subtotal</p>
-            <p id="subtotal-price" class="font-bold text-black"></p>
+        <section
+          class="border border-2 border-secondary rounded-md p-4 shadow-md flex-1"
+        >
+          <h1 class="font-bold text-3xl">Cart</h1>
+          <div id="cart-items" class="flex flex-col gap-4"></div>
+        </section>
+        <section
+          id="cart"
+          class="border border-2 border-secondary rounded-md p-4 shadow-md flex flex-col gap-4"
+        >
+          <h2 class="font-bold text-3xl">Summary</h2>
+          <div class="flex flex-col gap-2">
+            <div class="flex justify-between text-base items-center">
+              <p>Subtotal</p>
+              <p id="subtotal-price" class="font-bold text-black"></p>
+            </div>
+            <div class="flex justify-between text-base items-center">
+              <p>Shipping</p>
+              <p class="font-bold">Calculated at checkout</p>
+            </div>
+            <div class="flex justify-between text-base items-center">
+              <p>Tax</p>
+              <p id="tax-price" class="font-bold text-black"></p>
+            </div>
+            <div class="flex justify-between text-base items-center">
+              <p>Total</p>
+              <p id="total-price" class="font-bold text-black"></p>
+            </div>
+            <a
+              href="checkout.html"
+              id="checkout"
+              class="bg-primary flex items-center justify-center text-secondary border-none font-bold px-4 py-3 rounded-md"
+            >
+              Checkout
+            </a>
           </div>
-          <div class="flex justify-between text-base items-center">
-            <p>Shipping</p>
-            <p class="font-bold">Calculated at checkout</p>
-          </div>
-          <div class="flex justify-between text-base items-center">
-            <p>Tax</p>
-            <p id="tax-price" class="font-bold text-black"></p>
-          </div>
-          <div class="flex justify-between text-base items-center">
-            <p>Total</p>
-            <p id="total-price" class="font-bold text-black"></p>
-          </div>
-          <a
-            href="checkout.html"
-            id="checkout"
-            class="bg-primary flex items-center justify-center text-secondary border-none font-bold px-4 py-3 rounded-md"
-          >
-            Checkout
-          </a>
-        </div>
-      </section>
-    </main>
-    <footer-component />
+        </section>
+      </main>
+      <footer-component />
+    </div>
     <script type="module" src="/js/cart.js"></script>
   </body>
 </html>
