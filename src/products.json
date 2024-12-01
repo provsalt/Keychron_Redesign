@@ -46,17 +46,17 @@
       {
         "name": "Gateron G Pro Red",
         "image": "/switches/g_pro_red.png",
-        "description": "Smooth linear switch with a light actuation force."
+        "description": "Premium linear switch with a light actuation force."
       },
       {
         "name": "Gateron G Pro Blue",
         "image": "/switches/g_pro_blue.png",
-        "description": "Clicky switch with tactile feedback and audible click."
+        "description": "Premium clicky switch with tactile feedback and audible click."
       },
       {
         "name": "Gateron G Pro Brown",
         "image": "/switches/g_pro_brown.png",
-        "description": "Tactile switch with a gentle bump and moderate actuation force."
+        "description": "Premium tactile switch with a gentle bump and moderate actuation force."
       }
     ],
 
@@ -71,6 +71,29 @@
     "name": "Keychron V1 Max",
     "price": 129.99,
     "image": "/v1/v1_max.png",
+    "colours": [
+      {
+        "name": "Carbon Black",
+        "image": "/v1/v1_max.png"
+      }
+    ],
+    "switches": [
+      {
+        "name": "Gateron Jupiter Red",
+        "image": "/switches/jupiter_red.png",
+        "description": "Smooth linear switch with a light actuation force."
+      },
+      {
+        "name": "Gateron Jupiter Brown",
+        "image": "/switches/jupiter_brown.png",
+        "description": "Tactile switch with a gentle bump and moderate actuation force."
+      },
+      {
+        "name": "Gateron Jupiter Banana",
+        "image": "/switches/jupiter_banana.png",
+        "description": "Tactile switch with a medium actuation force and a noticeable bump."
+      }
+    ],
     "layout": "75%",
     "features": ["QMK/VIA Support", "Wireless Support", "Plastic Case"],
     "description": "Wireless mechanical keyboard with premium features"
@@ -80,8 +103,65 @@
     "name": "Keychron Q2 Max",
     "price": 189.99,
     "image": "/q2/q2_max.png",
+    "colours": [
+      {
+        "name": "Carbon Black",
+        "image": "/q2/q2_max.png"
+      },
+      {
+        "name": "Shell White",
+        "image": "/q2/q2_max_shell_white.png"
+      }
+    ],
+    "switches": [
+      {
+        "name": "Gateron Jupiter Red",
+        "image": "/switches/jupiter_red.png",
+        "description": "Smooth linear switch with a light actuation force."
+      },
+      {
+        "name": "Gateron Jupiter Brown",
+        "image": "/switches/jupiter_brown.png",
+        "description": "Tactile switch with a gentle bump and moderate actuation force."
+      },
+      {
+        "name": "Gateron Jupiter Banana",
+        "image": "/switches/jupiter_banana.png",
+        "description": "Tactile switch with a medium actuation force and a noticeable bump."
+      }
+    ],
     "layout": "65%",
     "features": ["Compact Size", "Wireless Support", "Aluminium Case"],
     "description": "Compact wireless mechanical keyboard"
+  },
+  {
+    "id": "k2-he",
+    "name": "Keychron K2 HE",
+    "price": 130.0,
+    "image": "/k2_he/k2_he_special_white.png",
+    "layout": "75%",
+    "features": ["Rapid Trigger", "Built for E-Sports", "Aluminium Case"],
+    "colours": [
+      {
+        "name": "Special Edition - Black",
+        "image": "/k2_he/k2_he_special_black.png"
+      },
+      {
+        "name": "Special Edition - White",
+        "image": "/k2_he/k2_he_special_white.png"
+      },
+      {
+        "name": "Black",
+        "image": "/k2_he/k2_he_black.png"
+      }
+    ],
+    "switches": [
+      {
+        "name": "Gateron Nebula Dual-Rail",
+        "image": "/switches/nebula.png",
+        "description": "Linear switch with a smooth keystroke"
+      }
+    ],
+    "description": "High-end mechanical keyboard with Hall Effect switches"
   }
 ]
