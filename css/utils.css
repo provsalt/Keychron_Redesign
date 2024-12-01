@@ -350,6 +350,11 @@ video {
   margin-top: 1rem;
 }
 
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .p-0 {
   padding: 0;
 }

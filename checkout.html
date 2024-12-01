@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Keychron - Checkout</title>
+
+    <link href="/css/normalize.css" rel="stylesheet" />
+    <link href="/css/utils.css" rel="stylesheet" />
+    <link href="/css/checkout.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/intl-tel-input@24.8.0/build/css/intlTelInput.css"
+    />
+
+    <script defer src="components/Navbar.js" type="module"></script>
+    <script defer src="components/Footer.js" type="module"></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav-bar />
+    </header>
+    <main class="p-4 md:px-12 gap-4">
+      <form class="flex flex-col md:flex-row md:flex-start">
+        <section class="p-4 flex flex-1 flex-col gap-4">
+          <section>
+            <h1 class="font-bold text-2xl mb-4">1. Contact</h1>
+            <div class="flex flex-col">
+              <label for="email">Email address*</label>
+              <input class="input" id="email" required type="email" />
+            </div>
+            <div class="flex flex-col">
+              <label for="phone">Phone Number*</label>
+              <input class="input w-full" id="phone" required type="tel" />
+            </div>
+            <div class="mt-4">
+              <input type="checkbox" id="consent" value="consent" />
+              <label for="consent"
+                >I consent to receive text messages for order updates</label
+              >
+            </div>
+          </section>
+          <hr class="hr-divider" />
+          <section>
+            <h1 class="font-bold text-2xl mb-4">2. Delivery</h1>
+            <button class="delivery-card">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-8"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m21 7.5-9-5.25L3 7.5m18 0-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"
+                />
+              </svg>
+            </button>
+          </section>
+        </section>
+        <section
+          class="border border-2 border-secondary rounded-md p-4 shadow-md flex flex-col gap-4"
+          id="checkout-section"
+        >
+          <h2 class="font-bold text-3xl">Checkout</h2>
+          <div class="flex flex-col gap-2">
+            <div class="flex justify-between text-base items-center">
+              <p>Subtotal</p>
+              <p class="font-bold text-black" id="subtotal-price"></p>
+            </div>
+            <!--          <div class="flex justify-between text-base items-center">-->
+            <!--            <p>Discount</p>-->
+            <!--            <p class="font-bold text-black" id="discount-price"></p>-->
+            <!--          </div>-->
+            <div class="flex justify-between text-base items-center">
+              <p>Shipping</p>
+              <p class="font-bold"></p>
+            </div>
+            <div class="flex justify-between text-base items-center">
+              <p>Tax</p>
+              <p class="font-bold text-black" id="tax-price"></p>
+            </div>
+            <div class="flex justify-between text-base items-center">
+              <p>Total</p>
+              <p class="font-bold text-black" id="total-price"></p>
+            </div>
+            <button
+              type="submit"
+              class="bg-primary text-secondary border-none my-8 font-bold px-4 py-3 rounded-md"
+              id="checkout"
+            >
+              Checkout
+            </button>
+          </div>
+        </section>
+      </form>
+    </main>
+    <footer-component />
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@24.8.0/build/js/intlTelInput.min.js"></script>
+    <script>
+      const input = document.querySelector("#phone");
+      window.intlTelInput(input, {
+        loadUtilsOnInit:
+          "https://cdn.jsdelivr.net/npm/intl-tel-input@24.8.0/build/js/utils.js",
+      });
+    </script>
+  </body>
+</html>

@@ -10,6 +10,7 @@ export default defineConfig({
         configure: "./configure.html",
         about: "./about.html",
         cart: "./cart.html",
+        checkout: "./checkout.html",
       },
     },
   },

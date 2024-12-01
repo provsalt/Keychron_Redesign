@@ -1,0 +1,27 @@
+.input {
+  padding: 0.625rem 0.875rem;
+  border-radius: calc(var(--radius-lg) * 2);
+  background: rgba(0, 0, 0, 0.12);
+  border: none;
+}
+
+#checkout-section {
+  flex-basis: 25dvw;
+  margin-top: 2rem;
+}
+
+.hr-divider {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  stroke-width: 1px;
+  stroke: rgba(7, 7, 7, 0.25);
+}
+
+.delivery-card {
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  border-radius: calc(var(--radius-lg) * 2);
+  border: 1px solid #000;
+  background: rgba(0, 0, 0, 0.2);
+}
