@@ -20,10 +20,9 @@ class CheckoutForm {
   }
 
   init() {
-    if (!this.cart || this.cart === []) {
+    if (!this.cart) {
       window.location = utils.base_url + "/cart";
     }
-    this.setupSectionToggles();
     this.setupDeliveryOptions();
     this.setupShippingOptions();
     this.setupPaymentOptions();
@@ -31,25 +30,6 @@ class CheckoutForm {
     this.setupPromoCode();
     this.handleFormSubmit();
     this.updateOrderSummary();
-  }
-
-  setupSectionToggles() {
-    this.sections.forEach((section) => {
-      const toggle = section.querySelector(".section-toggle");
-      const content = section.querySelector(".section-content");
-
-      toggle?.addEventListener("click", () => {
-        const isCollapsed = toggle.classList.contains("collapsed");
-
-        if (isCollapsed) {
-          toggle.classList.remove("collapsed");
-          content.style.maxHeight = content.scrollHeight + "px";
-        } else {
-          toggle.classList.add("collapsed");
-          content.style.maxHeight = "0px";
-        }
-      });
-    });
   }
 
   setupDeliveryOptions() {
@@ -154,6 +134,7 @@ class CheckoutForm {
   }
 
   validateInput(input) {
+    // TODO: backend validation if I had time but I don't it's currently 7pm
     const errorClass = "error";
     const errorMessage = input.nextElementSibling;
 

@@ -23,7 +23,7 @@
     width: 380px;
     align-self: flex-start;
     position: sticky;
-    top: calc(var(--header-height) + 2rem);
+    top: 8rem;
   }
 }
 
@@ -45,23 +45,6 @@
 .section-title {
   font-size: 1.5rem;
   font-weight: 600;
-}
-
-.section-toggle {
-  background: none;
-  border: none;
-  padding: 0.5rem;
-  cursor: pointer;
-}
-
-.section-toggle svg {
-  width: 1.5rem;
-  height: 1.5rem;
-  transition: transform 0.2s ease;
-}
-
-.section-toggle.collapsed svg {
-  transform: rotate(-180deg);
 }
 
 .form-group {
