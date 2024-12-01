@@ -3,17 +3,17 @@
     "id": "q1-he",
     "name": "Keychron Q1 HE",
     "price": 199.99,
-    "image": "/q1_he/q1_he.png",
+    "image": "/keyboards/q1_he/q1_he.png",
     "layout": "75%",
     "features": ["Rapid Trigger", "Built for E-Sports", "Aluminium Case"],
     "colours": [
       {
         "name": "Carbon Black",
-        "image": "/q1_he/q1_he_carbon_black.png"
+        "image": "/keyboards/q1_he/q1_he_carbon_black.png"
       },
       {
         "name": "Shell White",
-        "image": "/q1_he/q1_he_shell_white.png"
+        "image": "/keyboards/q1_he/q1_he_shell_white.png"
       }
     ],
     "switches": [
@@ -31,15 +31,15 @@
     "colours": [
       {
         "name": "Carbon Black",
-        "image": "/q1/q1_v2_black.png"
+        "image": "/keyboards/q1/q1_v2_black.png"
       },
       {
         "name": "Silver Grey",
-        "image": "/q1/q1_v2_grey.png"
+        "image": "/keyboards/q1/q1_v2_grey.png"
       },
       {
         "name": "Navy Blue",
-        "image": "/q1/q1_v2_navy_blue.png"
+        "image": "/keyboards/q1/q1_v2_navy_blue.png"
       }
     ],
     "switches": [
@@ -61,7 +61,7 @@
     ],
 
     "price": 179.99,
-    "image": "/q1/q1_v2_black.png",
+    "image": "/keyboards/q1/q1_v2_black.png",
     "layout": "75%",
     "features": ["Knob Version", "Highly Customizable", "Aluminium Case"],
     "description": "Premium mechanical keyboard with rotary knob"
@@ -70,11 +70,11 @@
     "id": "v1-max",
     "name": "Keychron V1 Max",
     "price": 88.4,
-    "image": "/v1/v1_max.png",
+    "image": "/keyboards/v1/v1_max.png",
     "colours": [
       {
         "name": "Carbon Black",
-        "image": "/v1/v1_max.png"
+        "image": "/keyboards/v1/v1_max.png"
       }
     ],
     "switches": [
@@ -102,15 +102,15 @@
     "id": "q2-max",
     "name": "Keychron Q2 Max",
     "price": 189.99,
-    "image": "/q2/q2_max.png",
+    "image": "/keyboards/q2/q2_max.png",
     "colours": [
       {
         "name": "Carbon Black",
-        "image": "/q2/q2_max.png"
+        "image": "/keyboards/q2/q2_max.png"
       },
       {
         "name": "Shell White",
-        "image": "/q2/q2_max_shell_white.png"
+        "image": "/keyboards/q2/q2_max_shell_white.png"
       }
     ],
     "switches": [
@@ -138,21 +138,21 @@
     "id": "k2-he",
     "name": "Keychron K2 HE",
     "price": 130.0,
-    "image": "/k2_he/k2_he_special_white.png",
+    "image": "/keyboards/k2_he/k2_he_special_white.png",
     "layout": "75%",
     "features": ["Rapid Trigger", "Built for E-Sports", "Aluminium Case"],
     "colours": [
       {
         "name": "Special Edition - Black",
-        "image": "/k2_he/k2_he_special_black.png"
+        "image": "/keyboards/k2_he/k2_he_special_black.png"
       },
       {
         "name": "Special Edition - White",
-        "image": "/k2_he/k2_he_special_white.png"
+        "image": "/keyboards/k2_he/k2_he_special_white.png"
       },
       {
         "name": "Black",
-        "image": "/k2_he/k2_he_black.png"
+        "image": "/keyboards/k2_he/k2_he_black.png"
       }
     ],
     "switches": [
