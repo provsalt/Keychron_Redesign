@@ -20,7 +20,7 @@ class CheckoutForm {
   }
 
   init() {
-    if (!this.cart) {
+    if (!this.cart || this.cart.length === 0) {
       window.location = utils.base_url + "/cart";
     }
     this.setupDeliveryOptions();
@@ -300,6 +300,8 @@ class CheckoutForm {
         const status = await this.processOrder(orderData);
 
         if (status.success) {
+          this.cart = [];
+          utils.storage.set("cart", this.cart);
           document.querySelector(".checkout-container").innerHTML = `
                         <div class="flex flex-col">
                             <h2 class="text-2xl font-bold">Order placed #${status.orderId}</h2>
@@ -317,7 +319,7 @@ class CheckoutForm {
   }
 
   async processOrder(orderData) {
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    await new Promise((resolve) => setTimeout(resolve, 2000)); // simulate api call to backend
 
     if (!this.validateOrderData(orderData)) {
       throw new Error("Invalid order data");
