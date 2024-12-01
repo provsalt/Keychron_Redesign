@@ -22,6 +22,8 @@ As a newcomer to mechanical keyboards:
 - I want to understand how different choices affect the price, so I can stay within my budget
 - I want a step-by-step configuration process, so I don't feel overwhelmed by choices
 
+Screens: https://www.figma.com/design/LbHiFWKZqmRkvk1HDlvPnG/FED_S10258960_Raymond_Assg1_Wireframe
+
 ### 🌟 Features
 
 ### Interactive Keyboard Configurator
