@@ -1,111 +1,228 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Keychron - Checkout</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keychron - Checkout</title>
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/utils.css">
+  <link rel="stylesheet" href="/css/checkout.css">
+  <script src="/js/three.js"></script>
 
-    <link href="/css/normalize.css" rel="stylesheet" />
-    <link href="/css/utils.css" rel="stylesheet" />
-    <link href="/css/checkout.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/intl-tel-input@24.8.0/build/css/intlTelInput.css"
-    />
+  <script defer src="components/Navbar.js" type="module"></script>
+  <script defer src="components/Card.js" type="module"></script>
+  <script defer src="components/Footer.js" type="module"></script>
 
-    <script defer src="components/Navbar.js" type="module"></script>
-    <script defer src="components/Footer.js" type="module"></script>
-  </head>
-  <body>
-    <header class="header">
-      <nav-bar />
-    </header>
-    <main class="p-4 md:px-12 gap-4">
-      <form class="flex flex-col md:flex-row md:flex-start">
-        <section class="p-4 flex flex-1 flex-col gap-4">
-          <section>
-            <h1 class="font-bold text-2xl mb-4">1. Contact</h1>
-            <div class="flex flex-col">
-              <label for="email">Email address*</label>
-              <input class="input" id="email" required type="email" />
-            </div>
-            <div class="flex flex-col">
-              <label for="phone">Phone Number*</label>
-              <input class="input w-full" id="phone" required type="tel" />
-            </div>
-            <div class="mt-4">
-              <input type="checkbox" id="consent" value="consent" />
-              <label for="consent"
-                >I consent to receive text messages for order updates</label
-              >
-            </div>
-          </section>
-          <hr class="hr-divider" />
-          <section>
-            <h1 class="font-bold text-2xl mb-4">2. Delivery</h1>
-            <button class="delivery-card">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="w-8"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="m21 7.5-9-5.25L3 7.5m18 0-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"
-                />
+</head>
+<body>
+<div id="app" class="app">
+  <header class="header">
+    <nav-bar></nav-bar>
+  </header>
+
+  <main class="checkout-page">
+    <div class="checkout-container">
+      <form id="checkout-form" class="checkout-form">
+        <section class="checkout-section" id="contact-section">
+          <div class="section-header">
+            <h2 class="section-title">1. Contact</h2>
+            <button type="button" class="section-toggle" aria-label="Toggle contact section">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
               </svg>
             </button>
-          </section>
+          </div>
+          <div class="section-content">
+            <div class="form-group">
+              <label for="email">Email address*</label>
+              <input type="email" id="email" name="email" required
+                     class="form-input" placeholder="me@example.com">
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone number*</label>
+              <input type="tel" id="phone" name="phone" required
+                     class="form-input" placeholder="+65 9991 4588">
+            </div>
+            <div class="form-group">
+              <label class="checkbox-label">
+                <input required type="checkbox" id="receive-updates" name="receiveUpdates">
+                <span>I consent to receive text messages for order updates</span>
+              </label>
+            </div>
+          </div>
         </section>
-        <section
-          class="border border-2 border-secondary rounded-md p-4 shadow-md flex flex-col gap-4"
-          id="checkout-section"
-        >
-          <h2 class="font-bold text-3xl">Checkout</h2>
-          <div class="flex flex-col gap-2">
-            <div class="flex justify-between text-base items-center">
-              <p>Subtotal</p>
-              <p class="font-bold text-black" id="subtotal-price"></p>
-            </div>
-            <!--          <div class="flex justify-between text-base items-center">-->
-            <!--            <p>Discount</p>-->
-            <!--            <p class="font-bold text-black" id="discount-price"></p>-->
-            <!--          </div>-->
-            <div class="flex justify-between text-base items-center">
-              <p>Shipping</p>
-              <p class="font-bold"></p>
-            </div>
-            <div class="flex justify-between text-base items-center">
-              <p>Tax</p>
-              <p class="font-bold text-black" id="tax-price"></p>
-            </div>
-            <div class="flex justify-between text-base items-center">
-              <p>Total</p>
-              <p class="font-bold text-black" id="total-price"></p>
-            </div>
-            <button
-              type="submit"
-              class="bg-primary text-secondary border-none my-8 font-bold px-4 py-3 rounded-md"
-              id="checkout"
-            >
-              Checkout
+
+        <section class="checkout-section" id="delivery-section">
+          <div class="section-header">
+            <h2 class="section-title">2. Delivery</h2>
+            <button type="button" class="section-toggle" aria-label="Toggle delivery section">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+              </svg>
             </button>
+          </div>
+          <div class="section-content">
+            <div class="delivery-options">
+              <button type="button" class="delivery-option active" data-delivery="deliver">
+                <span class="icon">📦</span>
+                <div class="option-details">
+                  <span class="option-title">Deliver to me</span>
+                  <span class="option-price">From $5.99</span>
+                </div>
+              </button>
+              <button type="button" class="delivery-option" data-delivery="pickup">
+                <span class="icon">🏪</span>
+                <div class="option-details">
+                  <span class="option-title">Store pickup</span>
+                  <span class="option-price">Free shipping</span>
+                </div>
+              </button>
+            </div>
+
+            <div id="shipping-options" class="shipping-options">
+              <button type="button" class="shipping-option active">
+                <div class="option-details">
+                  <span class="option-title">Standard</span>
+                  <span class="option-delivery">6-7 days</span>
+                  <span class="option-price">$5.99</span>
+                </div>
+              </button>
+              <button type="button" class="shipping-option">
+                <div class="option-details">
+                  <span class="option-title">NinjaVan Expedited Shipping</span>
+                  <span class="option-delivery">1-2 days</span>
+                  <span class="option-price">$8.99</span>
+                </div>
+              </button>
+            </div>
+
+            <div class="delivery-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName">First name*</label>
+                  <input type="text" id="firstName" name="firstName" class="form-input">
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Last name*</label>
+                  <input type="text" id="lastName" name="lastName" class="form-input">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="address1">Address*</label>
+                <input type="text" id="address1" name="address1" class="form-input">
+              </div>
+              <div class="form-group">
+                <label for="address2">Address 2</label>
+                <input type="text" id="address2" name="address2" class="form-input">
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="city">City*</label>
+                  <input type="text" id="city" name="city" class="form-input">
+                </div>
+                <div class="form-group">
+                  <label for="zipCode">Zip code*</label>
+                  <input type="text" id="zipCode" name="zipCode" class="form-input">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="state">State/Province*</label>
+                <select id="state" name="state" class="form-select">
+                  <option value="">Select state</option>
+                  <option value="south-west">South-West Singapore</option>
+                  <option value="south-east">South-East Singapore</option>
+                  <option value="north-east">North-East Singapore</option>
+                  <option value="north">North Singapore</option>
+                  <option value="central">Central Singapore</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="checkout-section" id="payment-section">
+          <div class="section-header">
+            <h2 class="section-title">3. Payment</h2>
+            <button type="button" class="section-toggle" aria-label="Toggle payment section">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+          </div>
+          <div class="section-content">
+            <div class="payment-options">
+              <button type="button" class="payment-option active" data-payment="card">
+                <span class="icon">💳</span>
+                <span>Pay with card</span>
+              </button>
+              <button type="button" class="payment-option" data-payment="googlepay">
+                <img src="/logo/google-pay.svg" alt="Google Pay">
+                <span>Google Pay</span>
+              </button>
+              <button type="button" class="payment-option" data-payment="applepay">
+                <img src="/logo/apple-pay.svg" alt="Apple Pay">
+                <span>Apple Pay</span>
+              </button>
+            </div>
+
+            <div id="card-payment-form" class="card-payment-form">
+              <div class="form-group">
+                <label for="cardNumber">Card number*</label>
+                <input type="text" id="cardNumber" name="cardNumber"
+                       class="form-input" pattern="\d*">
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="expiration">Expiration*</label>
+                  <input type="text" id="expiration" name="expiration"
+                         class="form-input" placeholder="MM/YY">
+                </div>
+                <div class="form-group">
+                  <label for="cvv">CVV*</label>
+                  <input type="text" id="cvv" name="cvv"
+                         class="form-input" pattern="\d*">
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </form>
-    </main>
-    <footer-component />
-    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@24.8.0/build/js/intlTelInput.min.js"></script>
-    <script>
-      const input = document.querySelector("#phone");
-      window.intlTelInput(input, {
-        loadUtilsOnInit:
-          "https://cdn.jsdelivr.net/npm/intl-tel-input@24.8.0/build/js/utils.js",
-      });
-    </script>
-  </body>
+
+      <aside class="order-summary">
+        <h2 class="summary-title">Checkout</h2>
+        <div class="summary-content">
+          <div class="summary-line">
+            <span>Subtotal</span>
+            <span data-summary="subtotal" class="amount"></span>
+          </div>
+          <div class="summary-line">
+            <span>Shipping</span>
+            <span class="amount" data-summary="shipping"></span>
+          </div>
+          <div class="summary-line">
+            <span>Tax</span>
+            <span class="amount" data-summary="tax"></span>
+          </div>
+          <div class="summary-line total">
+            <span>Total</span>
+            <span class="amount" data-summary="total"></span>
+          </div>
+
+          <div class="promo-code">
+            <input type="text" placeholder="Enter code" class="promo-input">
+            <button type="button" class="promo-button">Apply</button>
+          </div>
+
+          <button type="submit" class="place-order-button" form="checkout-form">
+            Place order
+          </button>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer-component></footer-component>
+</div>
+<script type="module" src="/js/checkout.js"></script>
+</body>
 </html>

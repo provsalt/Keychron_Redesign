@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "three": "^0.170.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.2.0",
