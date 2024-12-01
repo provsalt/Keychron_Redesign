@@ -1,3 +1,5 @@
+import { init } from "./three.js";
+
 export const utils = {
   base_url: import.meta.env.BASE_URL || "",
   dom: {
@@ -70,3 +72,5 @@ export const utils = {
     }
   },
 };
+
+init();

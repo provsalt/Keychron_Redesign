@@ -83,7 +83,9 @@
   border-radius: var(--radius-lg);
   background: var(--secondary);
   font-size: 1rem;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .form-input:focus,
@@ -314,8 +316,12 @@ label {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @media (min-width: 769px) {
@@ -340,5 +346,4 @@ label {
   .place-order-button {
     transition: none;
   }
-
 }

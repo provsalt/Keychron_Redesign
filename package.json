@@ -1,6 +1,5 @@
 {
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "@eslint/eslintrc": "^3.2.0",
     "@eslint/js": "^9.15.0",
